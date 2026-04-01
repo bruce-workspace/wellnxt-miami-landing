@@ -147,7 +147,19 @@ body{font-family:'DM Sans',sans-serif;color:var(--text);background:#fff;overflow
   transition:transform 0.2s;
 }
 .btn-rsvp:hover{transform:translateY(-3px)}
-.hero-cta-group{display:flex;flex-direction:column;align-items:center;gap:0;margin-top:8px}
+.hero-cta-group{display:flex;flex-direction:column;align-items:center;gap:16px;margin-top:8px}
+.free-badge{
+  font-family:'DM Sans',sans-serif;
+  font-size:13px;
+  font-weight:700;
+  letter-spacing:0.12em;
+  text-transform:uppercase;
+  color:#7de0ff;
+  background:rgba(29,179,244,0.12);
+  border:1px solid rgba(29,179,244,0.3);
+  border-radius:30px;
+  padding:8px 20px;
+}
 /* Ticket card */
 .ticket-card{
   background:rgba(255,255,255,0.06);
@@ -485,22 +497,8 @@ footer a{color:var(--blue);text-decoration:none}
       </div>
     </div>
     <div class="hero-cta-group">
-      <div class="ticket-card">
-        <div class="ticket-tiers">
-          <div class="tier tier-free">
-            <div class="tier-label">General Admission</div>
-            <div class="tier-price">FREE</div>
-            <div class="tier-perks">Full 2-day access</div>
-          </div>
-          <div class="tier tier-vip">
-            <div class="tier-label">VIP</div>
-            <div class="tier-price">$95</div>
-            <div class="tier-perks">$1,000+ gift bag + iHeart Lounge</div>
-          </div>
-        </div>
-        <a href="https://www.eventbrite.com/e/wellnxt-miami-x-fest-2026-tickets-1982980477990?utm_source=meta&utm_medium=paid&utm_campaign=wellnxt-miami&utm_content=hero" class="btn-ticket-primary" onclick="if(window.fbq)fbq('track','InitiateCheckout');if(window.gtag)gtag('event','click',{event_category:'CTA',event_label:'Get Tickets Hero'})">CLAIM YOUR FREE TICKET</a>
-        <div class="ticket-urgency">Spots fill fast — <strong>April 18-19 · Miami</strong></div>
-      </div>
+      <div class="free-badge">✦ General Admission is FREE ✦</div>
+      <a href="https://www.eventbrite.com/e/wellnxt-miami-x-fest-2026-tickets-1982980477990?utm_source=meta&utm_medium=paid&utm_campaign=wellnxt-miami&utm_content=hero" class="btn-rsvp" onclick="if(window.fbq)fbq('track','InitiateCheckout');if(window.gtag)gtag('event','click',{event_category:'CTA',event_label:'Get Tickets Hero'})">GET YOUR TICKETS</a>
       <a href="https://www.wellnxtfest.com/miami" class="btn-ghost-link" onclick="if(window.gtag)gtag('event','click',{event_category:'CTA',event_label:'See Full Site Hero'})">
         See the full festival
         <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
@@ -713,22 +711,8 @@ footer a{color:var(--blue);text-decoration:none}
     <h2 class="cta-headline fade-up">April 18-19<br>Miami</h2>
     <p class="cta-sub fade-up fade-up-2">Two days. One sacred space. Your next level.</p>
     <div class="hero-cta-group fade-up fade-up-3">
-      <div class="ticket-card">
-        <div class="ticket-tiers">
-          <div class="tier tier-free">
-            <div class="tier-label">General Admission</div>
-            <div class="tier-price">FREE</div>
-            <div class="tier-perks">Full 2-day access</div>
-          </div>
-          <div class="tier tier-vip">
-            <div class="tier-label">VIP</div>
-            <div class="tier-price">$95</div>
-            <div class="tier-perks">$1,000+ gift bag + iHeart Lounge</div>
-          </div>
-        </div>
-        <a href="https://www.eventbrite.com/e/wellnxt-miami-x-fest-2026-tickets-1982980477990?utm_source=meta&utm_medium=paid&utm_campaign=wellnxt-miami&utm_content=bottom" class="btn-ticket-primary" onclick="if(window.fbq)fbq('track','InitiateCheckout');if(window.gtag)gtag('event','click',{event_category:'CTA',event_label:'Get Tickets Bottom'})">CLAIM YOUR FREE TICKET</a>
-        <div class="ticket-urgency">Spots fill fast — <strong>April 18-19 · Miami</strong></div>
-      </div>
+      <div class="free-badge">✦ General Admission is FREE ✦</div>
+      <a href="https://www.eventbrite.com/e/wellnxt-miami-x-fest-2026-tickets-1982980477990?utm_source=meta&utm_medium=paid&utm_campaign=wellnxt-miami&utm_content=bottom" class="btn-rsvp-light" onclick="if(window.fbq)fbq('track','InitiateCheckout');if(window.gtag)gtag('event','click',{event_category:'CTA',event_label:'Get Tickets Bottom'})">GET YOUR TICKETS</a>
       <a href="https://www.wellnxtfest.com/miami" class="btn-ghost-link" onclick="if(window.gtag)gtag('event','click',{event_category:'CTA',event_label:'See Full Site Bottom'})">
         See the full festival
         <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
