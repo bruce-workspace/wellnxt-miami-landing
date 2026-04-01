@@ -4,6 +4,31 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>WellNXT Miami X Fest 2026 — April 18-19</title>
+
+<!-- Meta Pixel -->
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', 'PIXEL_ID_HERE');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=PIXEL_ID_HERE&ev=PageView&noscript=1"/></noscript>
+
+<!-- Google tag (GA4) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-XXXXXXXXXX', {
+    linker: { domains: ['wellnxtfest.com', 'tickets.wellnxtfest.com', 'eventbrite.com'] }
+  });
+</script>
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
@@ -122,6 +147,33 @@ body{font-family:'DM Sans',sans-serif;color:var(--text);background:#fff;overflow
   transition:transform 0.2s;
 }
 .btn-rsvp:hover{transform:translateY(-3px)}
+.btn-secondary{
+  display:inline-block;
+  background:transparent;
+  color:#fff;
+  text-decoration:none;
+  font-family:'Bebas Neue',sans-serif;
+  font-size:20px;
+  letter-spacing:0.12em;
+  padding:18px 40px;
+  border-radius:50px;
+  border:2px solid rgba(255,255,255,0.5);
+  transition:transform 0.2s, border-color 0.2s;
+}
+.btn-secondary:hover{transform:translateY(-3px);border-color:#fff}
+.hero-cta-group{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin-bottom:0}
+.pricing-callout{
+  display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:20px
+}
+.pricing-pill{
+  font-size:13px;
+  font-weight:600;
+  letter-spacing:0.04em;
+  padding:6px 16px;
+  border-radius:20px;
+}
+.pill-free{background:rgba(29,179,244,0.25);color:#7de0ff;border:1px solid rgba(29,179,244,0.4)}
+.pill-vip{background:rgba(255,200,60,0.2);color:#ffd966;border:1px solid rgba(255,200,60,0.35)}
 @keyframes glow{
   0%,100%{box-shadow:0 0 20px rgba(29,179,244,0.4),0 0 40px rgba(29,179,244,0.2)}
   50%{box-shadow:0 0 30px rgba(29,179,244,0.7),0 0 60px rgba(29,179,244,0.35)}
@@ -395,7 +447,14 @@ footer a{color:var(--blue);text-decoration:none}
         <div class="hero-stat-label">One Sacred Space</div>
       </div>
     </div>
-    <a href="https://www.wellnxtfest.com/miami" class="btn-rsvp">RESERVE YOUR SPOT</a>
+    <div class="hero-cta-group">
+      <a href="https://www.eventbrite.com/e/wellnxt-miami-x-fest-2026-tickets-1982980477990?utm_source=meta&utm_medium=paid&utm_campaign=wellnxt-miami&utm_content=landing" class="btn-rsvp" onclick="fbq('track','InitiateCheckout');gtag('event','click',{event_category:'CTA',event_label:'Get Tickets Hero'})">GET TICKETS</a>
+      <a href="https://www.wellnxtfest.com/miami" class="btn-secondary" onclick="gtag('event','click',{event_category:'CTA',event_label:'See Full Site Hero'})">SEE FULL EVENT SITE</a>
+    </div>
+    <div class="pricing-callout">
+      <span class="pricing-pill pill-free">General Admission — FREE</span>
+      <span class="pricing-pill pill-vip">VIP — $95 · $1,000+ in goodies</span>
+    </div>
   </div>
 </section>
 
@@ -602,7 +661,14 @@ footer a{color:var(--blue);text-decoration:none}
   <div class="cta-inner">
     <h2 class="cta-headline fade-up">April 18-19<br>Miami</h2>
     <p class="cta-sub fade-up fade-up-2">Two days. One sacred space. Your next level.</p>
-    <a href="https://www.wellnxtfest.com/miami" class="btn-rsvp-light fade-up fade-up-3">RESERVE YOUR SPOT</a>
+    <div class="hero-cta-group fade-up fade-up-3">
+      <a href="https://www.eventbrite.com/e/wellnxt-miami-x-fest-2026-tickets-1982980477990?utm_source=meta&utm_medium=paid&utm_campaign=wellnxt-miami&utm_content=landing-bottom" class="btn-rsvp-light" onclick="fbq('track','InitiateCheckout');gtag('event','click',{event_category:'CTA',event_label:'Get Tickets Bottom'})">GET TICKETS</a>
+      <a href="https://www.wellnxtfest.com/miami" class="btn-secondary" style="color:#fff" onclick="gtag('event','click',{event_category:'CTA',event_label:'See Full Site Bottom'})">SEE FULL EVENT SITE</a>
+    </div>
+    <div class="pricing-callout fade-up fade-up-3" style="margin-top:16px">
+      <span class="pricing-pill pill-free">General Admission — FREE</span>
+      <span class="pricing-pill pill-vip">VIP — $95 · $1,000+ in goodies</span>
+    </div>
   </div>
 </section>
 
