@@ -128,6 +128,10 @@ body{font-family:'DM Sans',sans-serif;color:var(--text);background:#fff;overflow
   0%,100%{box-shadow:0 0 18px rgba(29,179,244,0.35),0 4px 24px rgba(29,179,244,0.2)}
   50%{box-shadow:0 0 32px rgba(29,179,244,0.6),0 4px 40px rgba(29,179,244,0.35)}
 }
+.vip-teaser{
+  font-size:12px;font-weight:600;letter-spacing:0.06em;
+  color:rgba(245,200,66,0.75);
+}
 .btn-ghost{
   display:inline-flex;align-items:center;gap:5px;
   font-size:13px;font-weight:600;color:rgba(255,255,255,0.4);
@@ -384,10 +388,8 @@ footer a{color:var(--blue);text-decoration:none}
     </div>
     <div class="hero-cta-group">
       <div class="free-badge">&#10022; General Admission is FREE &#10022;</div>
-      <div class="hero-btn-row">
-        <a href="https://www.eventbrite.com/e/wellnxt-miami-x-fest-2026-tickets-1982980477990?utm_source=meta&utm_medium=paid&utm_campaign=wellnxt_miami_lp&utm_content=ga_free" class="btn-primary" onclick="if(window.fbq)fbq('track','InitiateCheckout',{content_name:'GA Free',value:0,currency:'USD'});if(window.gtag)gtag('event','click',{event_category:'CTA',event_label:'Get Tickets Hero GA'})">GET YOUR FREE TICKET</a>
-        <a href="https://www.eventbrite.com/e/wellnxt-miami-x-fest-2026-tickets-1982980477990?utm_source=meta&utm_medium=paid&utm_campaign=wellnxt_miami_lp&utm_content=vip_95" class="btn-vip" onclick="if(window.fbq)fbq('track','InitiateCheckout',{content_name:'VIP $95',value:95,currency:'USD'});if(window.gtag)gtag('event','click',{event_category:'CTA',event_label:'Get Tickets Hero VIP'})">VIP &mdash; $95</a>
-      </div>
+      <a href="https://www.eventbrite.com/e/wellnxt-miami-x-fest-2026-tickets-1982980477990?utm_source=meta&utm_medium=paid&utm_campaign=wellnxt_miami_lp&utm_content=hero" class="btn-primary" onclick="if(window.fbq)fbq('track','InitiateCheckout',{content_name:'Get Tickets',value:0,currency:'USD'});if(window.gtag)gtag('event','click',{event_category:'CTA',event_label:'Get Tickets Hero'})">GET YOUR TICKETS</a>
+      <div class="vip-teaser">&#9733; VIP packages available &mdash; $1,000+ in value for $95</div>
       <a href="https://www.wellnxtfest.com/miami" class="btn-ghost" onclick="if(window.gtag)gtag('event','click',{event_category:'CTA',event_label:'See Full Site Hero'})">
         See the full festival
         <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
