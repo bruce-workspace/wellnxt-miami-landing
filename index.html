@@ -147,38 +147,70 @@ body{font-family:'DM Sans',sans-serif;color:var(--text);background:#fff;overflow
   transition:transform 0.2s;
 }
 .btn-rsvp:hover{transform:translateY(-3px)}
-.btn-outline{
-  display:inline-block;
-  background:transparent;
-  color:rgba(255,255,255,0.85);
-  text-decoration:none;
-  font-family:'DM Sans',sans-serif;
-  font-size:15px;
-  font-weight:600;
-  letter-spacing:0.04em;
-  padding:14px 32px;
-  border-radius:50px;
-  border:1.5px solid rgba(255,255,255,0.35);
-  transition:transform 0.2s,border-color 0.2s,color 0.2s;
+.hero-cta-group{display:flex;flex-direction:column;align-items:center;gap:0;margin-top:8px}
+/* Ticket card */
+.ticket-card{
+  background:rgba(255,255,255,0.06);
+  backdrop-filter:blur(12px);
+  border:1px solid rgba(255,255,255,0.12);
+  border-radius:24px;
+  padding:24px 28px 20px;
+  width:100%;
+  max-width:360px;
+  margin-bottom:16px;
 }
-.btn-outline:hover{transform:translateY(-2px);border-color:rgba(255,255,255,0.7);color:#fff}
-.hero-cta-group{display:flex;flex-direction:column;align-items:center;gap:14px}
-.fomo-line{
-  font-size:13px;
-  color:rgba(255,255,255,0.6);
-  letter-spacing:0.04em;
+.ticket-tiers{display:flex;gap:12px;margin-bottom:20px}
+.tier{
+  flex:1;
+  background:rgba(255,255,255,0.06);
+  border-radius:14px;
+  padding:12px 10px;
+  text-align:center;
+  border:1px solid rgba(255,255,255,0.1);
+}
+.tier-label{
+  font-size:10px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;
+  color:rgba(255,255,255,0.5);margin-bottom:4px;
+}
+.tier-price{
+  font-family:'Bebas Neue',sans-serif;font-size:28px;line-height:1;color:#fff;
+}
+.tier-price span{font-size:13px;font-family:'DM Sans',sans-serif;font-weight:400;color:rgba(255,255,255,0.5)}
+.tier-perks{font-size:11px;color:rgba(255,255,255,0.55);margin-top:4px;line-height:1.4}
+.tier-free .tier-price{color:#7de0ff}
+.tier-vip .tier-price{color:#ffd966}
+.btn-ticket-primary{
+  display:block;width:100%;text-align:center;
+  background:var(--blue);
+  color:#fff;
+  text-decoration:none;
+  font-family:'Bebas Neue',sans-serif;
+  font-size:19px;
+  letter-spacing:0.1em;
+  padding:16px 24px;
+  border-radius:14px;
+  animation:glow 2.5s ease-in-out infinite;
+  transition:transform 0.2s;
+  margin-bottom:10px;
+}
+.btn-ticket-primary:hover{transform:translateY(-2px)}
+.ticket-urgency{
+  font-size:11px;color:rgba(255,255,255,0.45);text-align:center;
+  letter-spacing:0.03em;
+}
+.ticket-urgency strong{color:rgba(255,200,60,0.9)}
+.btn-ghost-link{
+  display:inline-flex;align-items:center;gap:6px;
+  font-size:13px;font-weight:600;
+  color:rgba(255,255,255,0.5);
+  text-decoration:none;
+  letter-spacing:0.03em;
+  transition:color 0.2s;
   margin-top:4px;
 }
-.fomo-line strong{color:rgba(255,255,255,0.9);font-weight:600}
-.pricing-row{
-  display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:10px
-}
-.pricing-pill{
-  font-size:12px;font-weight:700;letter-spacing:0.05em;text-transform:uppercase;
-  padding:5px 14px;border-radius:20px;
-}
-.pill-free{background:rgba(29,179,244,0.2);color:#7de0ff;border:1px solid rgba(29,179,244,0.35)}
-.pill-vip{background:rgba(255,200,60,0.15);color:#ffd966;border:1px solid rgba(255,195,50,0.3)}
+.btn-ghost-link:hover{color:rgba(255,255,255,0.85)}
+.btn-ghost-link svg{opacity:0.6;transition:opacity 0.2s,transform 0.2s}
+.btn-ghost-link:hover svg{opacity:1;transform:translateX(3px)}
 @keyframes glow{
   0%,100%{box-shadow:0 0 20px rgba(29,179,244,0.4),0 0 40px rgba(29,179,244,0.2)}
   50%{box-shadow:0 0 30px rgba(29,179,244,0.7),0 0 60px rgba(29,179,244,0.35)}
@@ -453,13 +485,26 @@ footer a{color:var(--blue);text-decoration:none}
       </div>
     </div>
     <div class="hero-cta-group">
-      <div class="pricing-row">
-        <span class="pricing-pill pill-free">General Admission — FREE</span>
-        <span class="pricing-pill pill-vip">VIP $95 · $1,000+ in goodies</span>
+      <div class="ticket-card">
+        <div class="ticket-tiers">
+          <div class="tier tier-free">
+            <div class="tier-label">General Admission</div>
+            <div class="tier-price">FREE</div>
+            <div class="tier-perks">Full 2-day access</div>
+          </div>
+          <div class="tier tier-vip">
+            <div class="tier-label">VIP</div>
+            <div class="tier-price">$95</div>
+            <div class="tier-perks">$1,000+ gift bag + iHeart Lounge</div>
+          </div>
+        </div>
+        <a href="https://www.eventbrite.com/e/wellnxt-miami-x-fest-2026-tickets-1982980477990?utm_source=meta&utm_medium=paid&utm_campaign=wellnxt-miami&utm_content=hero" class="btn-ticket-primary" onclick="if(window.fbq)fbq('track','InitiateCheckout');if(window.gtag)gtag('event','click',{event_category:'CTA',event_label:'Get Tickets Hero'})">CLAIM YOUR FREE TICKET</a>
+        <div class="ticket-urgency">Spots fill fast — <strong>April 18-19 · Miami</strong></div>
       </div>
-      <a href="https://www.eventbrite.com/e/wellnxt-miami-x-fest-2026-tickets-1982980477990?utm_source=meta&utm_medium=paid&utm_campaign=wellnxt-miami&utm_content=hero" class="btn-rsvp" onclick="if(window.fbq)fbq('track','InitiateCheckout');if(window.gtag)gtag('event','click',{event_category:'CTA',event_label:'Get Tickets Hero'})">GRAB YOUR FREE TICKET</a>
-      <p class="fomo-line">Spots are limited — <strong>don't sleep on this.</strong></p>
-      <a href="https://www.wellnxtfest.com/miami" class="btn-outline" onclick="if(window.gtag)gtag('event','click',{event_category:'CTA',event_label:'See Full Site Hero'})">See the full festival &rarr;</a>
+      <a href="https://www.wellnxtfest.com/miami" class="btn-ghost-link" onclick="if(window.gtag)gtag('event','click',{event_category:'CTA',event_label:'See Full Site Hero'})">
+        See the full festival
+        <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
     </div>
   </div>
 </section>
@@ -668,12 +713,26 @@ footer a{color:var(--blue);text-decoration:none}
     <h2 class="cta-headline fade-up">April 18-19<br>Miami</h2>
     <p class="cta-sub fade-up fade-up-2">Two days. One sacred space. Your next level.</p>
     <div class="hero-cta-group fade-up fade-up-3">
-      <div class="pricing-row">
-        <span class="pricing-pill pill-free">General Admission — FREE</span>
-        <span class="pricing-pill pill-vip">VIP $95 · $1,000+ in goodies</span>
+      <div class="ticket-card">
+        <div class="ticket-tiers">
+          <div class="tier tier-free">
+            <div class="tier-label">General Admission</div>
+            <div class="tier-price">FREE</div>
+            <div class="tier-perks">Full 2-day access</div>
+          </div>
+          <div class="tier tier-vip">
+            <div class="tier-label">VIP</div>
+            <div class="tier-price">$95</div>
+            <div class="tier-perks">$1,000+ gift bag + iHeart Lounge</div>
+          </div>
+        </div>
+        <a href="https://www.eventbrite.com/e/wellnxt-miami-x-fest-2026-tickets-1982980477990?utm_source=meta&utm_medium=paid&utm_campaign=wellnxt-miami&utm_content=bottom" class="btn-ticket-primary" onclick="if(window.fbq)fbq('track','InitiateCheckout');if(window.gtag)gtag('event','click',{event_category:'CTA',event_label:'Get Tickets Bottom'})">CLAIM YOUR FREE TICKET</a>
+        <div class="ticket-urgency">Spots fill fast — <strong>April 18-19 · Miami</strong></div>
       </div>
-      <a href="https://www.eventbrite.com/e/wellnxt-miami-x-fest-2026-tickets-1982980477990?utm_source=meta&utm_medium=paid&utm_campaign=wellnxt-miami&utm_content=bottom" class="btn-rsvp-light" onclick="if(window.fbq)fbq('track','InitiateCheckout');if(window.gtag)gtag('event','click',{event_category:'CTA',event_label:'Get Tickets Bottom'})">GRAB YOUR FREE TICKET</a>
-      <a href="https://www.wellnxtfest.com/miami" class="btn-outline" style="border-color:rgba(255,255,255,0.3);color:rgba(255,255,255,0.7)" onclick="if(window.gtag)gtag('event','click',{event_category:'CTA',event_label:'See Full Site Bottom'})">See the full festival &rarr;</a>
+      <a href="https://www.wellnxtfest.com/miami" class="btn-ghost-link" onclick="if(window.gtag)gtag('event','click',{event_category:'CTA',event_label:'See Full Site Bottom'})">
+        See the full festival
+        <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
     </div>
   </div>
 </section>
